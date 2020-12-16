@@ -29,8 +29,6 @@ function! Popup_Calculator()
                     call add(s:stack, s:stack[-1])
                 elseif s:w == "over"
                     call add(s:stack, s:stack[-2])
-                elseif s:w == "dupp"
-                    call add(s:stack, s:stack[-2:-1])
                 elseif s:w == "+"
                     let s:stack[-2] = s:stack[-2]+s:stack[-1]
                     let s:stack = s:stack[:-2]
